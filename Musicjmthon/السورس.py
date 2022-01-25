@@ -44,7 +44,7 @@ async def ping(client, m: Message):
 
 
 @Client.on_message(
-    filters.user(SUDO_USERS) & filters.command(["اعادة تشغيل"], prefixes=f"{HNDLR}")
+    filters.user(SUDO_USERS) & filters.command(["تحديث"], prefixes=f"{HNDLR}")
 )
 async def restart(client, m: Message):
     await m.delete()
@@ -57,7 +57,7 @@ async def restart(client, m: Message):
     await fire.edit("7")
     await fire.edit("8")
     await fire.edit("9")
-    await fire.edit("**تم اعادة تشغيل سورس اورتو ميوزك بنجاح ✓**")
+    await fire.edit("**تم تحديث سورس اورتو ميوزك بنجاح ✓**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 
