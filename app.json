@@ -15,7 +15,7 @@
             "required": true
         },
         "API_ID": {
-            "description": "ضع هنا الايبب ايدي",
+            "description": "ضع هنا الايبي ايدي",
             "required": true
         },
         "HNDLR": {
