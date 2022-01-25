@@ -1,0 +1,51 @@
+{
+    "name": "ميوزك اورتو",
+    "description": "هلا بك في تنصيب سورس ميوزك اورتو",
+    "logo": "https://telegra.ph/file/a7cc1e2cb656ce26c75ca.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "Fire",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/tm-harlin/orto",
+    "env": {
+        "SESSION": {
+            "description": "ضع هنا كود البايروكرام",
+            "required": true
+        },
+        "API_ID": {
+            "description": "ضع هنا الايبب ايدي",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "ضع هنا رمز الامر الذي تريده كمثال ( . - ! - / - ، ) ",
+            "required": false,
+            "value": "."
+        },
+        "API_HASH": {
+            "description": "ضع هنا الايبي هاش",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "ضع هنا ايدي حسابك",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
